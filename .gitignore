@@ -1,0 +1,25 @@
+# Excel temporary files
+~$*.xlsx
+~$*.xlsm
+~$*.xls
+
+# Local working/backup files
+*Backup*.xlsx
+*Working*.xlsx
+test_open.xlsx
+
+# Raw operational source files
+raw-data/
+source-data/
+internal-data/
+
+# Development artifacts containing local Power Query code/paths
+PowerQuery_M_Scripts.m
+
+# Personal/local configuration
+*.tmp
+*.log
+
+# OS files
+Thumbs.db
+.DS_Store
