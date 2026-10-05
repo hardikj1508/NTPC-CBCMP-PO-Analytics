@@ -508,8 +508,14 @@ in
 // ============================================================
 let
     Source = q_Manual_Additions_Raw,
-    CleanPO = Table.TransformColumns(Source, {{"PO No.", each Text.Trim(Text.Clean(Text.From(_))), type text}}),
-    FilterValid = Table.SelectRows(CleanPO, each [Validation Status] = "Valid New PO")
+    CleanPO = Table.TransformColumns(
+        Source,
+        {{"PO No.", each Text.Trim(Text.Clean(Text.From(_))), type text}}
+    ),
+    FilterValid = Table.SelectRows(
+        CleanPO,
+        each [Validation Status] = "Valid New PO"
+    )
 in
     FilterValid
 // ============================================================
